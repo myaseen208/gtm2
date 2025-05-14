@@ -1,0 +1,91 @@
+---
+title: "`gtm2`: Modeling Group Testing Data"
+format: 
+  html:
+    toc: true
+    number-sections: true
+    html-math-method: mathjax
+vignette: >
+  %\VignetteIndexEntry{Intro to gtm2}
+  %\VignetteEngine{quarto::html}
+  %\VignetteEncoding{UTF-8}
+execute: 
+  echo: true
+  warning: false
+---
+
+
+# Introcution
+Group testing is a cost-effective strategy for identifying positive cases in a population where the prevalence is low. The `dorfman` function in the `gtm2` package implements the **two-stage Dorfman group testing algorithm**, which includes both group testing and follow-up individual testing if a group is found to be positive.
+
+This vignette explains how to use the function and interpret its output, with a focus on accounting for imperfect **sensitivity** and **specificity**.
+
+# Model Details
+## Stage 1: Group Testing
+Samples are pooled into groups of size `c`. A group test result is simulated based on the true status of the group:
+
+$$
+P(Z_g = 1|Y_g) = \begin{cases}
+Se[1] & \text{if } \sum Y_g > 0 \\
+1-Sp[1] & \text{otherwise}
+\end{cases}
+$$
+
+## Stage 2: Individual Testing (if group positive)
+Each member of a positive group is tested individually:
+
+
+$$
+P(Z_i = 1|Y_i) = \begin{cases}
+Se[2] & \text{if } Y_i = 1 \\
+1-Sp[2] & \text{otherwise}
+\end{cases}
+$$
+
+
+
+# Function Usage
+## Arguments
+- `Y.true`: Vector of true individual statuses (0 = negative, 1 = positive)
+- `Se`: Vector of sensitivities for group and individual tests
+- `Sp`: Vector of specificities for group and individual tests
+- `c`: Integer group size (must evenly divide length of `Y.true`)
+
+
+## Example
+
+```{r}
+library(gtm2)
+set.seed(123)
+Y.true <- rbinom(10, 1, 0.3)
+result <- dorfman(Y.true, Se = c(0.95, 0.98), Sp = c(0.98, 0.99), c = 2)
+
+# Test results matrix
+result$Z
+
+# Individual tracking matrix
+result$Y
+```
+
+## Interpretation
+- `result$Z` contains all group and individual test results.
+- `result$Y` tracks each individual's test outcomes and IDs.
+
+Columns in `result$Z`:
+
+- Test result (0/1),
+- Group size,
+- Test type (1 = group, 2 = individual),
+- Sample indices
+
+Columns in result$Y:
+- Final test result,
+- Number of tests,
+- Group test ID,
+- Individual test ID (if applicable)
+
+# Conclusion
+The `dorfman` function provides a simulation-based decoder for Dorfman's group testing design. It is ideal for researchers analyzing test performance under imperfect conditions, and for simulating group testing workflows in low-prevalence scenarios.
+
+# References
+- Dorfman, R. (1943). The Detection of Defective Members of Large Populations. *Annals of Mathematical Statistics*, 14(4), 436–440.

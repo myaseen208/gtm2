@@ -1,0 +1,67 @@
+url: https://myaseen208.com/gtm2/
+
+home:
+  title: gtm2
+  description: Modeling Group Testing Data
+
+
+template:
+  bootstrap: 5
+  params:
+    bootswatch: united
+    ganalytics: UA-116716530-2
+    docsearch:
+      api_key: bdafb7ea4490644e670f470ee3ef537f
+      index_name: gtm2
+
+
+toc:
+  depth: 3
+
+authors:
+  Muhammmad Yaseen:
+    href: https://www.researchgate.net/profile/Muhammad_Yaseen10
+  Christopher McMahan:
+    href: https://www.clemson.edu/science/academics/departments/mathstat/about/profiles/mcmaha2
+  Christopher Bilder:
+    href: https://www.chrisbilder.com/
+  Joshua Tebbs:
+    href: https://people.stat.sc.edu/tebbs/
+
+development:
+  mode: unreleased
+
+
+navbar:
+  title: gtm2
+  type: default
+  left:
+    - icon: fa-home fa-lg
+      text: Home
+      href: index.html
+    - icon: fa-code
+      text: Reference
+      href: reference/index.html
+    - icon: fa-file-o
+      text: Vignettes
+      menu:
+      - text: "Intro to gtm2"
+        href: articles/Intro_gtm2.html
+    - icon: fa-newspaper-o
+      text: News
+      href: news/index.html
+  right:
+    - text: "GitHub"
+      href: https://github.com/myaseen208/gtm2
+      icon: fa-github
+      aria-label: "GitHub repository"
+    - text: "ResearchGate"
+      href: https://www.researchgate.net/profile/Muhammad_Yaseen10
+      icon: fa-github
+      aria-label: "ResearchGate"
+    - text: "Twitter"
+      href: https://twitter.com/myaseen208
+      icon: "fab fa-twitter"
+      aria-label: "Twitter"
+
+reference:

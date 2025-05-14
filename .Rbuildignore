@@ -1,0 +1,13 @@
+^docs$
+^doc$
+^_pkgdown\.yml$
+^.*\.Rproj$
+^\.Rproj\.user$
+^README.Rmd
+^README.qmd
+^vignettes/\.quarto$
+^cran-comments.md
+^CRAN-SUBMISSION$
+^.*\.Rproj$
+^\.Rproj\.user$
+^Meta$

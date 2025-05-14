@@ -1,0 +1,97 @@
+---
+format: md
+---
+
+```{r}
+#| echo: false
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "",
+  fig.path = "inst/extdata/"
+)
+```
+
+## `gtm2`: Modeling Group Testing Data
+
+
+###### Version : [`r getNamespaceVersion("gtm2")`](https://myaseen208.com/gtm2/); Copyright (C) 2024: License: [GPL-2|GPL-3](https://www.r-project.org/Licenses/)
+
+
+##### *Muhammad Yaseen^1^, Christopher McMahan^1^*, Christopher Bilder^2^*, and Joshua Tebbs^3^*
+
+1. [School of Mathematical & Statistical Sciences, Clemson University, Clemson, South Carolina, USA](https://www.clemson.edu/science/academics/departments/mathstat/)
+2. [Department of Statistics, University of Nebraska-Lincoln, Nebraska, USA](https://www.chrisbilder.com/)
+3. [Department of Statistics, University of South Carolina, Columbia, South Carolina, USA](https://people.stat.sc.edu/tebbs/)
+
+***
+
+[![minimal R version](https://img.shields.io/badge/R>%3D-3.5.0-6666ff.svg)](https://cran.r-project.org/)
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version-last-release/gtm2)](https://cran.r-project.org/package=gtm2)
+[![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/gtm2?color=green)](https://CRAN.R-project.org/package=gtm2)
+<!-- [![packageversion](https://img.shields.io/badge/Package%20version-0.2.3.3-orange.svg)](https://github.com/myaseen208/gtm2) -->
+
+```{r}
+#| results: asis
+#| echo: false
+#| eval: false
+dver <- ifelse(test = gsub("(.\\.)(\\d+)(\\..)", "", getNamespaceVersion("gtm2")) != "",
+               yes = getNamespaceVersion("gtm2"),
+               no = gsub("Version:\\s*", "", readLines(paste0("https://raw.githubusercontent.com/", "myaseen208/gtm2", "/master/DESCRIPTION"))[grep("Version:", readLines(paste0("https://raw.githubusercontent.com/", "myaseen208/gtm2", "/master/DESCRIPTION")))]))
+cat(paste("[![develVersion](https://img.shields.io/badge/devel%20version-", dver, "-orange.svg)](https://github.com/myaseen208/gtm2)", sep = ""))
+```
+
+<!-- [![GitHub Download Count](https://github-basic-badges.herokuapp.com/downloads/myaseen208/gtm2/total.svg)] -->
+[![Project Status: WIP](https://www.repostatus.org/badges/latest/inactive.svg)](https://www.repostatus.org/#inactive)
+[![lifecycle](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
+[![Last-changedate](https://img.shields.io/badge/last%20change-`r gsub('-', '--', Sys.Date())`-yellowgreen.svg)](https://github.com/myaseen208/gtm2)
+***
+
+## Description
+`r gsub("(<doi:)(.+)(>)", "[doi:\\2](https://doi.org/\\2)", gsub("\\n", " ", packageDescription("gtm2", fields = "Description")))`
+
+## Installation
+The package can be installed from CRAN as follows:
+
+```{r}
+#| eval: false
+install.packages("gtm2")
+```
+
+
+
+The development version can be installed from github as follows:
+
+```{r}
+#| eval: false
+library(pak)
+pkg_install("myaseen208/gtm2")
+```
+
+
+
+## What's new
+To know whats new in this version type:
+
+```{r}
+#| eval: false
+news(package = "gtm2")
+```
+
+## Links
+
+[CRAN page](https://cran.r-project.org/package=gtm2)
+
+[Github page](https://github.com/myaseen208/gtm2)
+
+[Documentation website](https://myaseen208.com/gtm2/)
+
+
+
+To cite the methods in the package use:
+
+
+```{r}
+#| comment: ""
+citation("gtm2")
+```

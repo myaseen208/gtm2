@@ -1,0 +1,8 @@
+bibentry(
+  "manual",
+  header = "Please, support this project by citing it in your publications!",
+  title = "PakNAcc: Shiny App for National Accounts",
+	author = "Muhammad Yaseen, Christopher McMahan, Christopher Bilder, and Joshua Tebbs",
+  year = 2025,
+  journal = "The Comprehensive R Archive Network (CRAN)",
+)
