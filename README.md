@@ -76,13 +76,12 @@ To cite the methods in the package use:
 citation("gtm2")
 Please, support this project by citing it in your publications!
 
-  Yaseen M, McMahan C, Bilder C, Tebbs J (2025). _PakNAcc: Shiny App
-  for National Accounts_.
+  Yaseen M, McMahan C, Bilder C, Tebbs J (2025). `gtm2`: Modeling Group Testing Data
 
 A BibTeX entry for LaTeX users is
 
   @Manual{,
-    title = {PakNAcc: Shiny App for National Accounts},
+    title = {`gtm2`: Modeling Group Testing Data},
     author = {Muhammad Yaseen and Christopher McMahan and Christopher Bilder and Joshua Tebbs},
     year = {2025},
     journal = {The Comprehensive R Archive Network (CRAN)},
